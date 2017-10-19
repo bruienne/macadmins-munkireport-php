@@ -14,7 +14,7 @@ RUN mkdir /var/www/munkireport
 
 WORKDIR /var/www/munkireport
 
-RUN curl -L -o ./munkireport-php.tar.gz https://github.com/munkireport/munkireport-php/archive/v2.14.0.tar.gz
+RUN curl -L -o ./munkireport-php.tar.gz https://github.com/munkireport/munkireport-php/archive/v2.15.2.tar.gz
 RUN tar -zxvf munkireport-php.tar.gz --strip-components=1
 RUN rm munkireport-php.tar.gz
 
