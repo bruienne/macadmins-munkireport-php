@@ -15,13 +15,13 @@ Run instructions
 
 Start the MR-PHP container as follows:
 
-`docker run -d -v /var/html/app/db -p 80:80 macadmins/munkireport-php`
+`docker run -d -v /var/www/munkireport/app/db -p 80:80 macadmins/munkireport-php`
 
 This will create a persistent storage volume on your Docker host and in the MR-PHP container. The database will be created there and persist after the container is stopped or removed.
 
 The default login/password is admin/admin - this can be changed by volume-binding your own config.php with a different admin password hash:
 
-`docker run -d -v /var/html/app/db -v /path/to/your/config.php:/var/html/app/config.php -p 80:80 macadmins/munkireport-php`
+`docker run -d -v /var/www/munkireport/app/db -v /path/to/your/config.php:/var/www/munkireport/app/config.php -p 80:80 macadmins/munkireport-php`
 
 The line to add looks like this (this is the password hash in the image):
 
